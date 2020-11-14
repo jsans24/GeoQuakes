@@ -23,3 +23,9 @@ body {
   padding-right: 2em;
   background-color: pink;
 }
+
+.map {
+  position: fixed;
+  height: 100vh;
+  width: 40%;
+}
