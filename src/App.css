@@ -26,6 +26,6 @@ body {
 
 .map {
   position: fixed;
-  height: 100vh;
+  height: 96vh;
   width: 40%;
 }
