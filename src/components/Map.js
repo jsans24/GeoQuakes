@@ -1,15 +1,18 @@
 import React from 'react';
+import image from '../images/earthquake.png';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
-import axios from 'axios'
 
 export const MapContainer = (props) => {
-    const image = require('../images/earthquake.png')
 
     const quakesList = props.quakes.map((quakeObj) => (
       <Marker
-      icon= {image}
+        icon = {{
+          url: image,
+          scaledSize: new props.google.maps.Size(37, 37),
+        }}
         title={quakeObj.properties.title}
         position={{lat:quakeObj.geometry.coordinates[1], lng:quakeObj.geometry.coordinates[0]}}
+        
       />
     ))
 
